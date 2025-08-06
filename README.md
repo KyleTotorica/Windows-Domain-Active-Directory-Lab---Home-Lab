@@ -33,7 +33,7 @@ DNS Configuration
 
 Client Configuration and Domain Join
 1. Configured the client machine (Windows 10) to point to the domain controller (192.168.0.19)
-![Domain Configuration on client]{images/Configuring Domain on Windows 10.png}
+![Domain Configuration on client](images/Configuring Domain on Windows 10.png)
 3. Renamed my Client machine to Windows10
 4. Joined the domain KTG.local
 5. Rebooted the machine and logged in to it with a domain user account that I configured on the controller
