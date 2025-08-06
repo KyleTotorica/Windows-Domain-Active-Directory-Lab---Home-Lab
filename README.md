@@ -33,9 +33,10 @@ DNS Configuration
 
 Client Configuration and Domain Join
 1. Configured the client machine (Windows 10) to point to the domain controller (192.168.0.19)
-2. Renamed my Client machine to Windows10
-3. Joined the domain KTG.local
-4. Rebooted the machine and logged in to it with a domain user account that I configured on the controller
+   -![Domain Config on Clinet](images/Configuring Domain on Windows 10.png)
+3. Renamed my Client machine to Windows10
+4. Joined the domain KTG.local
+5. Rebooted the machine and logged in to it with a domain user account that I configured on the controller
 
 User and Group Management
 1. Created Organizational Units(OUs): Users, Computers, It
@@ -43,10 +44,10 @@ User and Group Management
 3. Assigned the users to different groups: IT Admmmins, HR
 
 Group Policy Configuration(GPO)
-1.Created an Organizational Unit, moved the test domain user into this OU
-2.Created new GPO's named KTG_LockScreenPloicy and KTG_PasswordManager
-3.Configured these lockscreen and password GPO's enabling real world policies such as: setting a minumum password requirement and password complexity, 
-4.Tested these GPO's on the Windows 10 client by restarting it and logging in as a domain user and verified the password requirements and the lock screen policy was enforced
+1. Created an Organizational Unit, moved the test domain user into this OU
+2. Created new GPO's named KTG_LockScreenPloicy and KTG_PasswordManager
+3. Configured these lockscreen and password GPO's enabling real world policies such as: setting a minumum password requirement and password complexity, 
+4. Tested these GPO's on the Windows 10 client by restarting it and logging in as a domain user and verified the password requirements and the lock screen policy was enforced
 
 What I Learned
 -How Active Directory and DNS work together within a Windows domain
