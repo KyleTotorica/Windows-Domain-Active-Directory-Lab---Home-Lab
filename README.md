@@ -30,6 +30,7 @@ DNS Configuration
 3. Set the preferred DNS server to 127.0.0.1 so it point to the local host
 4. Once set up on the server I configured the Windows10 host by setting the perfered DNS Server to that of the controller (192.168.0.19)
 5. Confirmed the functionality on the host through the command line
+[DNS configured on Host to point to the controller](images/DNS-Configured-on-Host.png)
 
 Client Configuration and Domain Join
 1. Configured the client machine (Windows 10) to point to the domain controller (192.168.0.19)
@@ -37,17 +38,23 @@ Client Configuration and Domain Join
 3. Renamed my Client machine to Windows10
 4. Joined the domain KTG.local
 5. Rebooted the machine and logged in to it with a domain user account that I configured on the controller
+![Joined Domain on Client](images/Domain-Joined.png)
+6. After joining the Domain on the client machine, I confirmed that it was successful by moving to the controller and seeing the client show up in the active directory
+![Client machine listed in server's active directory](images/Client-Windows10-Listed-in-Controller-Active-Directory.png)
 
 User and Group Management
 1. Created Organizational Units(OUs): Users, Computers, It
 2. Created domain users: kyletotorica, jtotorica, rtotorica
 3. Assigned the users to different groups: IT Admmmins, HR
+![OU's Created, Users joined to IT_Admins OU](images/Created-OU's-IT_Admins.png)
 
 Group Policy Configuration(GPO)
 1. Created an Organizational Unit, moved the test domain user into this OU
 2. Created new GPO's named KTG_LockScreenPloicy and KTG_PasswordManager
-3. Configured these lockscreen and password GPO's enabling real world policies such as: setting a minumum password requirement and password complexity, 
-4. Tested these GPO's on the Windows 10 client by restarting it and logging in as a domain user and verified the password requirements and the lock screen policy was enforced
+![GPO Password Requirement Settings](images/Adding-GPO's-Password-Requirements.png)
+![GPO Screen Lock Settings](images/More-GPO's-Screen-Lock-Settings.png)
+4. Configured these lockscreen and password GPO's enabling real world policies such as: setting a minumum password requirement and password complexity, 
+5. Tested these GPO's on the Windows 10 client by restarting it and logging in as a domain user and verified the password requirements and the lock screen policy was enforced
 
 What I Learned
 -How Active Directory and DNS work together within a Windows domain
