@@ -30,7 +30,7 @@ DNS Configuration
 3. Set the preferred DNS server to 127.0.0.1 so it point to the local host
 4. Once set up on the server I configured the Windows10 host by setting the perfered DNS Server to that of the controller (192.168.0.19)
 5. Confirmed the functionality on the host through the command line
-[DNS configured on Host to point to the controller](images/DNS-Configured-on-Host.png)
+![DNS configured on Host to point to the controller](images/DNS-Configured-on-Host.png)
 
 Client Configuration and Domain Join
 1. Configured the client machine (Windows 10) to point to the domain controller (192.168.0.19)
