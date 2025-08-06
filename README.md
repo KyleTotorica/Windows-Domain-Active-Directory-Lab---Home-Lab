@@ -46,7 +46,7 @@ User and Group Management
 1. Created Organizational Units(OUs): Users, Computers, It
 2. Created domain users: kyletotorica, jtotorica, rtotorica
 3. Assigned the users to different groups: IT Admmmins, HR
-![OU's Created, Users joined to IT_Admins OU](images/Created-OU's-IT_Admins.png)
+![OU's Created, Users joined to IT_Admins OU](images/Created-OU's- IT_Admins.png)
 
 Group Policy Configuration(GPO)
 1. Created an Organizational Unit, moved the test domain user into this OU
