@@ -40,13 +40,14 @@ Client Configuration and Domain Join
 5. Rebooted the machine and logged in to it with a domain user account that I configured on the controller
 ![Joined Domain on Client](images/Domain-Joined.png)
 6. After joining the Domain on the client machine, I confirmed that it was successful by moving to the controller and seeing the client show up in the active directory
+
 ![Client machine listed in server's active directory](images/Client-Windows10-Listed-In-Controller-Active-Directory.png)
 
 User and Group Management
 1. Created Organizational Units(OUs): Users, Computers, It
 2. Created domain users: kyletotorica, jtotorica, rtotorica
 3. Assigned the users to different groups: IT Admmmins, HR
-![OU's Created, Users joined to IT_Admins OU](images/Created-OU's- IT_Admins.png)
+![OU's Created, Users joined to IT_Admins OU](images/Created-OU's-IT_Admins.png)
 
 Group Policy Configuration(GPO)
 1. Created an Organizational Unit, moved the test domain user into this OU
