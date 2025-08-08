@@ -17,7 +17,7 @@ Domain Controller     Windows Server 2019            Domain Controller and DNS
 Client Machine           Windows 10                     Domain-joined Client
 
 -Basic settup of lab (written Diagram)
-![written diagram](images/WrittenDiagram.png)
+![written diagram](images/WrittenDiagram.jpg)
 
 
 
