@@ -14,9 +14,13 @@ Role                         OS                              Purpose
 Domain Controller     Windows Server 2019            Domain Controller and DNS
 Client Machine           Windows 10                     Domain-joined Client
 
-Virtual Machines are running  in VirtualBox
+
 
 #Steps
+Configure Network Adapters
+Adapter 1 (NAT):Internet access
+Adapter 2 (Internal Network): Enable communication with the client. Both the server and the client machines run on same network (interface 1 for client)
+
 Active Directory Configuration
 1. Promoted the server machine to a domain controlller for the new domain KTG.local
 2. Used Add roles and features wizard within server manager to install
@@ -24,16 +28,21 @@ Active Directory Configuration
    -DNS Server
 3.Rebooted the Server and confirmed that the server now had Primary Domain Controller functionallity
 
+Install and Configured DHCP
+1. Installed DHCP through server manager and authorized DHCP using the domain credentials
+2. Created a new DHCP scope for incoming devices (172.16.0.100 - 200)
+3. Set the Server to act as the router andd default gateway
+
 DNS Configuration
 1. Installed the DNS role through the server manager
 2. I verified that DNS was installed and that there was a forward loopup zones that included a zone for the domain KTG.local
 3. Set the preferred DNS server to 127.0.0.1 so it point to the local host
-4. Once set up on the server I configured the Windows10 host by setting the perfered DNS Server to that of the controller (192.168.0.19)
+4. Once set up on the server I configured the Windows10 host by setting the perfered DNS Server to that of the controller (172.16.0.1)
 5. Confirmed the functionality on the host through the command line
 ![DNS configured on Host to point to the controller](images/DNS-Configured-on-Host.png)
 
 Client Configuration and Domain Join
-1. Configured the client machine (Windows 10) to point to the domain controller (192.168.0.19)
+1. Configured the client machine (Windows 10) to point to the domain controller (172.16.0.1)
 ![Domain Configuration on client](images/Configuring-Domain-on-Windows-10.png)
 3. Renamed my Client machine to Windows10
 4. Joined the domain KTG.local
@@ -56,6 +65,14 @@ Group Policy Configuration(GPO)
 ![GPO Screen Lock Settings](images/More-GPO's-Screen-Lock-Settings.png)
 4. Configured these lockscreen and password GPO's enabling real world policies such as: setting a minumum password requirement and password complexity, 
 5. Tested these GPO's on the Windows 10 client by restarting it and logging in as a domain user and verified the password requirements and the lock screen policy was enforced
+
+Automated User Creation of 1000 Users Using PowerShell to Simulate an Enterprise Environment
+1. The script I used
+![Powershell Script](images/powershellscript.png)
+   -Created an Organizational Unit to hold all of the new user that will be created
+   - Reads info on user data from a CSV file, 1000 randomly generated names
+   -  Adds user account to the active directory in the OU created
+![created users](images/1000usersinactivedirectory)
 
 What I Learned
 -How Active Directory and DNS work together within a Windows domain
