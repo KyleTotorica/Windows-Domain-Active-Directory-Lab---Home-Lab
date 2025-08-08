@@ -63,14 +63,6 @@ User and Group Management
 3. Assigned the users to different groups: IT Admmmins, HR
 ![OU's Created, Users joined to IT_Admins OU](images/Created-OU's-IT_Admins.png)
 
-Group Policy Configuration(GPO)
-1. Created an Organizational Unit, moved the test domain user into this OU
-2. Created new GPO's named KTG_LockScreenPloicy and KTG_PasswordManager
-![GPO Password Requirement Settings](images/Adding-GPO's-Password-Requirements.png)
-![GPO Screen Lock Settings](images/More-GPO's-Screen-Lock-Settings.png)
-4. Configured these lockscreen and password GPO's enabling real world policies such as: setting a minumum password requirement and password complexity, 
-5. Tested these GPO's on the Windows 10 client by restarting it and logging in as a domain user and verified the password requirements and the lock screen policy was enforced
-
 Automated User Creation of 1000 Users Using PowerShell to Simulate an Enterprise Environment
 1. The script I used
 ![Powershell Script](images/powershellscript.png)
@@ -79,6 +71,14 @@ Automated User Creation of 1000 Users Using PowerShell to Simulate an Enterprise
    -  Adds user account to the active directory in the OU created
 ![created users](images/1000usersinactivedirectory.png)
 2. Now on the client machine any of the 1000 users will be able to log in using their assigned credentials similar to the setup in an enterprise setting
+
+Group Policy Configuration(GPO)
+1. Created an Organizational Unit, moved the newly created usersinto this OU
+2. Created new GPO's named KTG_LockScreenPloicy and KTG_PasswordManager
+![GPO Password Requirement Settings](images/Adding-GPO's-Password-Requirements.png)
+![GPO Screen Lock Settings](images/More-GPO's-Screen-Lock-Settings.png)
+4. Configured these lockscreen and password GPO's enabling real world policies such as: setting a minumum password requirement and password complexity, 
+5. Tested these GPO's on the Windows 10 client by restarting it and logging in as a domain user and verified the password requirements for various of the user accounts and the lock screen policy was enforced
 
 What I Learned
 -How Active Directory and DNS work together within a Windows domain
