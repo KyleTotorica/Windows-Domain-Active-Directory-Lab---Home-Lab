@@ -72,7 +72,7 @@ Automated User Creation of 1000 Users Using PowerShell to Simulate an Enterprise
    -Created an Organizational Unit to hold all of the new user that will be created
    - Reads info on user data from a CSV file, 1000 randomly generated names
    -  Adds user account to the active directory in the OU created
-![created users](images/1000usersinactivedirectory)
+![created users](images/1000usersinactivedirectory.png)
 
 What I Learned
 -How Active Directory and DNS work together within a Windows domain
