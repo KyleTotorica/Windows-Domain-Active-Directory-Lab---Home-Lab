@@ -1,5 +1,5 @@
 # Windows-Domain-Active-Directory-Lab---Home-Lab
-Set up a virtualized Windows Domain environment that implemented Active Directory Domain Services (AD DS). Created and managed Organizational Units(OUs), Users, and Groups, as well as configured Group Policy Objectives(GPOs) that enforced lock screen and UI settings. Installed and configured DHCP for automatic IP address assignment. 
+Set up a virtualized Windows Domain environment that implemented Active Directory Domain Services (AD DS). Created and managed Organizational Units(OUs), Users, and Groups, as well as configured Group Policy Objectives(GPOs) that enforced lock screen and UI settings. Installed and configured DHCP for automatic IP address assignment. Ran a script that automated the creation of 1000 new users to the active directory to simulate an enterprise environment
 
 #Goal
 Set up a basic Windows Domain environment with:
@@ -7,12 +7,17 @@ Set up a basic Windows Domain environment with:
 -Configure an internal DNS Server for name resolution 
 -A domain created - joined a Windows 10 client
 -Create and manage users and groups
+-automate creation of new users
 -Apply Group Policy Objects(GPOs)
+-More coming
 
 #Lab Environment
 Role                         OS                              Purpose
 Domain Controller     Windows Server 2019            Domain Controller and DNS
 Client Machine           Windows 10                     Domain-joined Client
+
+-Basic settup of lab (written Diagram)
+![written diagram](images/WrittenDiagram.png)
 
 
 
